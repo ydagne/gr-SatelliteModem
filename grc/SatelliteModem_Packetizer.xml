@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<block>
+  <name>Packetizer</name>
+  <key>SatelliteModem_Packetizer</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.Packetizer($MTU, $UDPPort, $nonBlocking)</make>
+
+  <param>
+    <name>MTU</name>
+    <key>MTU</key>
+    <type>int</type>
+  </param>
+
+
+  <param>
+    <name>UDP Port</name>
+    <key>UDPPort</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Non-Blocking</name>
+    <key>nonBlocking</key>
+    <type>int</type>
+     <option>
+       <name>Yes</name>
+       <key>1</key>
+     </option>
+     <option>
+       <name>No</name>
+       <key>0</key>
+     </option>
+  </param>
+
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

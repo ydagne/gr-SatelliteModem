@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<block>
+  <name>Depacketizer</name>
+  <key>SatelliteModem_Depacketizer</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.Depacketizer($MTU, $UDPPort)</make>
+
+  <param>
+    <name>MTU</name>
+    <key>MTU</key>
+    <type>int</type>
+  </param>
+
+
+  <param>
+    <name>UDP Port</name>
+    <key>UDPPort</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+</block>

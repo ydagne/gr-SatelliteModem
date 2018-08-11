@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<block>
+  <name>DPSKReceiver</name>
+  <key>SatelliteModem_DPSKReceiver</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.DPSKReceiver($excessBW, $sps, $arity)</make>
+
+  <param>
+    <name>Excess BW (alpha)</name>
+    <key>excessBW</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Samples/symbol</name>
+    <key>sps</key>
+    <type>float</type>
+  </param>
+
+
+  <param>
+    <name>Arity</name>
+    <key>arity</key>
+    <type>int</type>
+  </param>
+  
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

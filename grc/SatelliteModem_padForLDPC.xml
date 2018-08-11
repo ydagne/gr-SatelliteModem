@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<block>
+  <name>padForLDPC</name>
+  <key>SatelliteModem_padForLDPC</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.padForLDPC($frameBits, $blockSize)</make>
+
+  <param>
+    <name>Frame bits</name>
+    <key>frameBits</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Block bits</name>
+    <key>blockSize</key>
+    <type>int</type>
+  </param>
+
+
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

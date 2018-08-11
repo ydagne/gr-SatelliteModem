@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<block>
+    <name>SatelliteModem Configuration</name>
+    <key>variable_configuration</key>
+    <category>SatelliteModem</category>
+    <var_make>self.$(id) = $(id) = $value</var_make>
+    <make></make>
+    
+
+  <param>
+    <name>Configuration</name>
+    <key>value</key>
+    <type>raw</type>
+     <option>
+       <name>Viterbi 1/2 BPSK</name>
+       <key>{'encoder' : 'cc','rate' : 0.5, 'arity' : 2, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 100}</key> <!-- 1024 -->
+     </option>
+     <option>
+       <name>Viterbi 1/2 QPSK</name>
+       <key>{'encoder' : 'cc','rate' : 0.5, 'arity' : 4, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 100}</key> <!-- 1024 -->
+     </option>
+     <option>
+       <name>Viterbi 3/4 BPSK</name>
+       <key>{'encoder' : 'cc','rate' : 0.75, 'arity' : 2, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 102}</key> <!-- 1026 -->
+     </option>
+     <option>
+       <name>Viterbi 3/4 QPSK</name>
+       <key>{'encoder' : 'cc','rate' : 0.75, 'arity' : 4, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 102}</key> <!-- 1026 -->
+     </option>
+     <option>
+       <name>Viterbi 7/8 QPSK</name>
+       <key>{'encoder' : 'cc','rate' : 0.875, 'arity' : 4, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 106}</key> <!-- 1030 -->
+     </option>
+     <option>
+       <name>LDPC 0.42 BPSK</name>
+       <key>{'encoder' : 'ldpc','rate' : 0.42, 'arity' : 2, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 120}</key> <!-- 1030 -->
+     </option>
+     <option>
+       <name>LDPC 0.42 QPSK</name>
+       <key>{'encoder' : 'ldpc','rate' : 0.42, 'arity' : 4, 'excessBW' : 0.35, 'preambleOverhead' : 8, 'MTU' : 120}</key> <!-- 1044 -->
+     </option>
+  </param>
+
+    <doc>
+SatelliteModem configuration.
+    </doc>
+</block>

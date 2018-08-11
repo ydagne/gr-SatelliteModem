@@ -1,0 +1,10 @@
+To use the SatelliteModem blocks, the Python namespaces
+is in 'SatelliteModem', which is imported as:
+
+    import SatelliteModem
+
+See the Doxygen documentation for details about the blocks available
+in this package. A quick listing of the details can be found in Python
+after importing by using:
+
+    help(SatelliteModem)

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<block>
+  <name>PreambleDetector</name>
+  <key>SatelliteModem_PreambleDetector</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.PreambleDetector($payloadLength, $overheadBytes)</make>
+ 
+  <param>
+    <name>Payload Length</name>
+    <key>payloadLength</key>
+    <type>int</type>
+  </param>
+
+
+  <param>
+    <name>Preamble overhead (bytes)</name>
+    <key>overheadBytes</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

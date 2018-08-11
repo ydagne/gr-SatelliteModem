@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<block>
+  <name>FECDecoder</name>
+  <key>SatelliteModem_FECDecoder</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.FECDecoder($type, $pktLen, $rate)</make>
+
+  <param>
+    <name>Decoder type</name>
+    <key>type</key>
+    <type>string</type>
+  </param>
+
+  <param>
+    <name>Packet Length</name>
+    <key>pktLen</key>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Rate</name>
+    <key>rate</key>
+    <type>float</type>
+     <!--
+     <option>
+       <name>1/2</name>
+       <key>0.5</key>
+     </option>
+     <option>
+       <name>3/4</name>
+       <key>0.75</key>
+     </option>
+     <option>
+       <name>7/8</name>
+       <key>0.875</key>
+     </option> -->
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

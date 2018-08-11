@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {I}Introduction}{1}
+\contentsline {section}{\numberline {II}Installation}{1}
+\contentsline {section}{\numberline {III}Transceiver Design}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Modulation}{1}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Synchronization}{2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Forward Error-Correcting Code (FEC)}{2}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-D}}Packet Encoder}{2}
+\contentsline {section}{\numberline {IV}Examples}{3}

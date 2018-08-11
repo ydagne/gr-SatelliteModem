@@ -1,0 +1,237 @@
+% Style file `IEEEtran.sty' created by Gerry Murray, June 1992, 
+% gmurray@ieeepub.org
+
+% Modified 4/20/93 by Payman Arabshahi: Changed definition of
+% abstract, commented out keyword definition and edited the
+% section called 'Usage', changed definition of sectioning
+% commands.
+
+% This Is A Sample File Using The `IEEEtran.sty'
+
+% \documentstyle[IEEEtran]{article}
+% \begin{document}
+
+% \title{Applications of Interval Computations}
+% \author{A.B. Author}
+
+% \maketitle
+
+% \begin{abstract}
+% This paper contains applications of interval computations\cite{Moore
+% 1966}. 
+% \end{abstract} 
+%  
+
+% \auffil{The author is with Interval University, Interval City,
+% Intervalia. The author is specially thanful to Interval Science
+% Foundations for the partial support.}
+
+% \section{Some Applications}
+
+% We consider applications of three types:
+% \subsection{Good applications}
+% Good applications are described in \cite{Moore 1966}.
+
+% \subsection{Bad Applications}
+
+% Bad applications are described in \cite{Author 1994}.
+
+% \begin{thebibliography}{99}
+% \bibitem{Moore 1966}
+% R. E. Moore, {\bf Interval analysis}, Prentice Hall, Englewood Cliffs,
+%  NJ, 1966. 
+
+% \bibitem{Author 1994}
+%  A.B. Author, ``Bad applications of interval computations'', {\it
+%  International Journal of Bad Applications}, 1994, Vol. 8, pp.
+%  666--669.
+%    
+% \end{thebibliography}
+%
+
+% \end{document}
+
+% ************************************************************************
+
+\textheight        23.3cm
+\textwidth         16.2cm
+\topmargin         -53pt
+\oddsidemargin     2pt
+\evensidemargin    0pt 
+\parindent         1em
+
+\pagestyle{empty}
+
+\setlength\columnsep{0.17in}  
+\newlength\titlebox \setlength\titlebox{1.75in}
+\flushbottom
+\twocolumn 
+
+
+
+% Make \small be smaller (8 pt)
+
+\def\small{\@setsize\small{9pt}\viiipt\@viiipt\let\@listi\@listI}
+
+
+% Make \footnotesize be smaller (7 pt)
+
+\def\footnotesize{\@setsize\footnotesize{8pt}\viipt\@viipt\let\@listi\@listI}
+
+\def\abstract{\bf\mbox{{\boldmath $Abstract$}{\bf---}}}
+
+\def\endabstract{\medskip\rm}
+
+%\def\abst#1{{\boldmath%
+%\mathchoice{\hbox{$\displaystyle#1$}}{\hbox{$\textstyle#1$}}%
+%{\hbox{$\scriptstyle#1$}}{\hbox{$\scriptscriptstyle#1$}}}}%
+
+% No contents needed
+
+\def\addcontentsline#1#2#3{}
+
+
+% Let's make the title
+
+\def\maketitle{\par
+
+ \begingroup
+
+    \twocolumn[\@maketitle]% original
+
+ \endgroup
+
+ \let\maketitle\relax \let\@maketitle\relax
+
+ \gdef\@author{}\gdef\@title{}}
+
+
+\def\@maketitle{\vbox to \titlebox{\hsize\textwidth
+
+ \linewidth\hsize \vskip 2ex plus 1fil minus 2ex \centering
+
+ {\huge\bf \@title \par} \vskip 3ex plus 0.5fil minus 2ex
+
+ {\def\and{\unskip\enspace{\rm and}\enspace}%
+
+  \def\And{\end{tabular}\hss \egroup \hskip 1in plus 2fil 
+
+           \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\bf}%
+
+  \hbox to \linewidth{\large \hfil\hfil
+
+    \hbox to 0pt\bgroup\hss \begin{tabular}[t]{c}\@author 
+
+			    \end{tabular}\hss\egroup
+
+    \hfil\hfil}}
+
+  \vskip 5ex plus 2fil minus 2ex}}
+
+
+\newenvironment{abstracttext}{\hangindent=0pc\hangafter=-0\noindent
+\boldmath\small\bf$\abst{Abstract}$---$\!$\small\bf}{\par\rm\normalsize
+\unboldmath\medskip}
+
+%\newenvironment{keywords}{\hangindent=0pc\hangafter=-0\noindent\boldmath
+%\small\bf$\abst{Key Words}$---$\!$\small\bf}{\par\rm\normalsize\unboldmath}
+%
+%
+%\newenvironment{yourbiography}[1]{\bigskip\bigskip\bigskip
+%\hangindent=7pc\hangafter=-11\noindent\small{\bf#1} \parindent=1em}
+%{\par\rm\normalsize}
+%%
+%
+%
+
+\long\def\auffil#1{\insert\footins{\footnotesize
+
+    \interlinepenalty\interfootnotelinepenalty 
+
+    \splittopskip\footnotesep
+
+    \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+
+    \hsize\columnwidth \@parboxrestore
+
+    \rule{\z@}{\footnotesep}\ignorespaces\hskip 1em\parindent=1em #1\strut}}
+
+
+% don't box citations, add space between multiple citations, separate with ;
+
+% sections (I,II,...) and subsections (A,B,...) only
+
+% with less space
+
+%
+
+\def\thesection {\Roman{section}.\kern-0.5em}
+\def\thesubsection {\Alph{subsection}.\kern-0.5em}
+\def\thesubsubsection {\thesubsection\kern0.5em\arabic{subsubsection}.
+\kern-0.5em}
+\def\section{\@startsection {section}{1}{\z@}{-1.5ex plus
+-0.5ex minus -.2ex}{1.0ex plus 0.3ex minus .2ex}{\normalsize\sc\centering}}
+\def\subsection{\@startsection{subsection}{2}{\z@}{-1.5ex plus
+-0.2ex minus -.2ex}{0.8ex plus .2ex}{\normalsize\it\raggedright}}
+\def\subsubsection{\@startsection{subsubsection}{3}{\z@}{-1ex plus
+-0.5ex minus -.2ex}{0.8ex plus .2ex}{\normalsize\it\raggedright}}
+
+% Debug floats manually
+
+\def\topfraction{1.0}
+
+\def\dbltopfraction{1.0}
+
+\def\bottomfraction{1.0}
+
+\def\textfraction{0.0}
+
+\def\floatpagefraction{0.8}
+
+\def\dblfloatpagefraction{0.8}
+
+% Footnotes
+
+\footnotesep 8pt
+
+\def\footnoterule{}
+
+\setcounter{footnote}{0}
+
+% Lists and paragraphs
+
+\parskip 0pt
+
+\parindent 1em
+
+\leftmargini 2em
+
+\labelwidth\leftmargini\advance\labelwidth-\labelsep
+
+\def\@listI{\leftmargin\leftmargini\parsep 0pt\topsep 5pt plus 1pt minus 1pt
+
+\itemsep 0pt\partopsep 0pt\listparindent 0pt}
+
+\@listI
+
+\abovedisplayskip 0pt plus2pt minus5pt%
+
+\belowdisplayskip \abovedisplayskip
+
+\abovedisplayshortskip  0pt plus3pt%   
+
+\belowdisplayshortskip  0pt plus3pt minus3pt%
+
+% Have Fun.
+
+
+
+
+
+
+
+
+
+
+
+

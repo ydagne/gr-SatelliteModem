@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<block>
+  <name>DPSKDemodulator</name>
+  <key>SatelliteModem_DPSKDemodulator</key>
+  <category>SatelliteModem</category>
+  <import>import SatelliteModem</import>
+  <make>SatelliteModem.DPSKDemodulator($arity)</make>
+
+  <param>
+    <name>Arity</name>
+    <key>arity</key>
+    <type>int</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
